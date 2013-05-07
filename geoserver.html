@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>OGD Wien Geoserver - Open Data Development</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Open Data Development</h1>
+        <p>Tipps, Tricks und Hilfe zu <a href="https://twitter.com/ogdwien">@OGDWien</a> und Open Data Entwicklung in Österreich.</p>
+        <p class="view"><a href="index.html">Übersicht</a></p>        
+        <p class="view"><a href="geo.html">Einführung Geodaten</a></p>            
+        <p class="view"><a href="geoserver.html">Geoserver <small>OGD Wien</small></a></p>        
+        <p class="view"><a href="https://github.com/sindre/opendatadev/tree/gh-pages">Projekt auf GitHub <small>Nützliche Tipps oder Infos? - Pull Request machen!</small></a></p>
+      </header>
+      <section>
+        <h2>OGD Wien Geoserver</h2>
+        <h3>Technische Beschreibung</h3>
+        <p><a href="http://data.wien.gv.at/formate/geowebservices.html">http://data.wien.gv.at/formate/geowebservices.html</a></p>      
+        <h3>Fehlermeldungen</h3>
+        <p>Geoserver unterstützt laut <a href="http://docs.geoserver.org/stable/en/user/services/wfs/reference.html">Dokumentation</a> 3 verschiedene Service Exceptions. Wenn eine App einen Request an den Geoserver schickt muss dieser Request eines von den folgenden 3 Parametern enthalten um im Falle eines Fehlers das richtige Ausgabeformat zu bekommen.</p>
+        <ul>
+          <li>XML: exceptions=text/xml - (default) XML output</li>
+          <li>JSON: exceptions=application/json - Simple JSON</li>
+          <li>JSONP: exceptions=text/javascript -    Return a JsonP in the form: parseResponse(...jsonp...).</li>
+        </ul>
+        <p>Wenn der Geoserver nicht verfügbar ist, wird momentan ein HTTP 404 an die Client-App geschickt.<br>
+          Wenn der Response zu lange dauert (weil zu viele Daten übertragen werden), wird ein Timeout HTTP 408 retourniert.  
+        </p>
+        <h4>Beispiel XML ServiceException Antwort</h4>
+        <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;ows:ExceptionReport version=&quot;1.0.0&quot;
+xsi:schemaLocation=&quot;http://www.opengis.net/ows http://data.wien.gv.at/daten/geoserver/schemas/ows/1.0.0/owsExceptionReport.xsd&quot;
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:ows=&quot;http://www.opengis.net/ows&quot;&gt;&lt;ows:Exception exceptionCode=&quot;NoApplicableCode&quot;&gt;&lt;ows:ExceptionText&gt;java.lang.NullPointerException
+null&lt;/ows:ExceptionText&gt;&lt;/ows:Exception&gt;&lt;/ows:ExceptionReport&gt;
+        </code></pre>
+
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>

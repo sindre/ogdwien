@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Geodatenr - Open Data Development</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Open Data Development</h1>
+        <p>Tipps, Tricks und Hilfe zu <a href="https://twitter.com/ogdwien">@OGDWien</a> und Open Data Entwicklung in Österreich.</p>
+        <p class="view"><a href="index.html">Übersicht</a></p>        
+        <p class="view"><a href="geo.html">Einführung Geodaten</a></p>            
+        <p class="view"><a href="geoserver.html">Geoserver <small>OGD Wien</small></a></p>        
+        <p class="view"><a href="https://github.com/sindre/opendatadev/tree/gh-pages">Projekt auf GitHub <small>Nützliche Tipps oder Infos? - Pull Request machen!</small></a></p>
+      </header>
+      <section>
+        <h2>Einführung</h2>
+        <h3>Geodaten</h3>
+        <h4>Grundkarten</h4>
+        <p>Die Grundkarten kann man sehr einfach in bestehende Kartenframeworks (Google Maps, Leaflet, Openlayers) einbinden. Da diese an der Stadtgrenzen Wien enden, muss man gegebenenfalls eine Alternativkarte vorsehen. Hier bietet sich Open Street Map an.</p>
+        <ul>
+            <li>Grundkarte <a href="http://data.wien.gv.at/katalog/stadtplan-grundkarte.html">http://data.wien.gv.at/katalog/stadtplan-grundkarte.html</a></li>
+            <li>Adressbeschriftung <a href="http://data.wien.gv.at/katalog/beschriftung.html">http://data.wien.gv.at/katalog/beschriftung.html</a></li>
+            <li>Luftbild <a href="http://data.wien.gv.at/katalog/orthofoto.html">http://data.wien.gv.at/katalog/orthofoto.html</a></li>
+        </ul>
+        <h4>Standortdaten</h4>
+        <p>In der Liste aller OGD Datensätze sind jene mit Hinweis „Standort“ mit Geodaten versehen und können somit einfach auf einer Karte dargestellt werden. <a href="http://data.wien.gv.at/katalog/abc.html">http://data.wien.gv.at/katalog/abc.html</a>
+        <h4>Flächenkarten</h4>
+        <p>Neben POI (Point of Interest) gibt es auch Flächenkarten. Ein paar Beispiele:</p>
+        <ul>
+            <li>Solarpotentialkataster <a href="http://data.wien.gv.at/katalog/solarpotentialkataster.html">http://data.wien.gv.at/katalog/solarpotentialkataster.html</a></li>
+            <li>Flächenwidmungs- und Bebauungsplan <a href="http://data.wien.gv.at/katalog/flaechenwidmung-bebauungsplan.html">http://data.wien.gv.at/katalog/flaechenwidmung-bebauungsplan.html</a></li>
+            <li>Baumkataster <a href="http://data.wien.gv.at/katalog/baumkataster.html">http://data.wien.gv.at/katalog/baumkataster.html</a></li>
+        </ul>
+        <h4>Veranstaltungsdatenbank</h4>
+        <p>Die komplette Veranstaltungsdatenbank von wien.at ist im RSS Format mit Geoinformationen abrufbar. <a href="http://data.wien.gv.at/katalog/veranstaltungen.html">http://data.wien.gv.at/katalog/veranstaltungen.html</a><br>
+        Wichtig: Geoformat/ Koordinatensystem beachten!
+        </p>
+        <h3>Technische Links</h3>
+        <h4><a href="http://openlayers.org/">Open Layer</a> (JS Karten-Framework)</h4>
+        <p>Beispiel für <a href="http://dev.openlayers.org/releases/OpenLayers-2.12/examples/mobile-wmts-vienna.html#x=1823849.418472&y=6143760.7879735&z=12">OGD Wien Grundkarten Konfiguration</a>
+        und <a href="http://dev.openlayers.org/releases/OpenLayers-2.11/examples/geojson.html">allgemeine Standortdaten Einbindung (GeoJSON)</a></p>
+        <h4><a href="http://leafletjs.com/">Leaflet</a> (JS Karten-Framework)</h4>
+        <p>Beispiel für <a href="http://www.sindre.at/stadtplanmacher/">OGD Wien Grundkarten Konfiguration</a>
+        und <a href="http://leafletjs.com/examples/geojson.html">allgemeine Standortdaten Einbindung (GeoJSON)</a></p>        
+        <h4><a href="geoserver.html">OGD Wien GeoServer</a></h4>
+        <h4><a href="http://www.mapsmarker.com">Mapsmarker Wordpress Plugin</a></h4>
+        <p>The WordPress plugin “Leaflet Maps Marker” allows you to pin, organize and share your favorite spots through your WordPress powered site easily.</p>
+        <h4>OGD Wien Stadtplan Embedding</h4>
+        <p>Mit wenig Aufwand kann man eine einfach Karte mit Pin und Popup erstellen. Beispiel und Online Tool unter <a href="http://www.sindre.at/stadtplanmacher/">http://www.sindre.at/stadtplanmacher/</a></p>
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>

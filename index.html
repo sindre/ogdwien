@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>OGD Wien technische Hilfe</title>
+    <title>Übersicht - Open Data Development</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -15,41 +15,26 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>OGD Wien technische Hilfe</h1>
-        <p>Tipps, Tricks und Hilfe zu <a href="https://twitter.com/ogdwien">@OGDWien</a> Daten und Geoserver</p>
-
-        <p class="view"><a href="https://github.com/sindre/ogdwien/tree/gh-pages">View the Project on GitHub <small>sindre/ogdwien</small></a></p>
-
-
-        <!--ul>
-          <li><a href="https://github.com/sindre/ogdwien/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/sindre/ogdwien/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/sindre/ogdwien">View On <strong>GitHub</strong></a></li>
-        </ul-->
+       <h1>Open Data Development</h1>
+        <p>Tipps, Tricks und Hilfe zu <a href="https://twitter.com/ogdwien">@OGDWien</a> und Open Data Entwicklung in Österreich.</p>
+        <p class="view"><a href="index.html">Übersicht</a></p>        
+        <p class="view"><a href="geo.html">Einführung Geodaten</a></p>            
+        <p class="view"><a href="geoserver.html">Geoserver <small>OGD Wien</small></a></p>        
+        <p class="view"><a href="https://github.com/sindre/opendatadev/">Projekt auf GitHub <small>Nützliche Tipps oder Infos? - Pull Request machen!</small></a></p>
       </header>
       <section>
-        <h2>OGD Wien Geoserver</h2>
-        <h3>Fehlermeldungen</h3>
-        <p>Geoserver unterstützt laut <a href="http://docs.geoserver.org/stable/en/user/services/wfs/reference.html">Dokumentation</a> 3 verschiedene Service Exceptions. Wenn eine App einen Request an den Geoserver schickt muss dieser Request eines von den folgenden 3 Parametern enthalten um im Falle eines Fehlers das richtige Ausgabeformat zu bekommen.</p>
-        <ul>
-          <li>XML: exceptions=text/xml - (default) XML output</li>
-          <li>JSON: exceptions=application/json - Simple JSON</li>
-          <li>JSONP: exceptions=text/javascript -	Return a JsonP in the form: parseResponse(...jsonp...).</li>
+        <h2>Übersicht</h2>
+        <h3>Das Projekt</h3>
+        <p>Ziel ist es EntwicklerInnen den Einstieg in die Arbeit mit offenen Daten zu erleichtern.</p>
+        <h3>Mitarbeit - <span lang="en">Pull Request</span></h3>        
+        <p>Jede/r ist aufgerufen sich zu beteiligen und sein Wissen zu teilen. Das Projekt liegt auf <a href="https://github.com/sindre/opendatadev/">Github</a> und kann ganz einfach über einen <span lang="en">Pull Request</span> ergänzt werden.</p>
+        <h3>Informationen</h3>
+        <ul>      
+            <li><a href="geo.html">Einführung Geodaten</a></li>            
+            <li><a href="geoserver.html">Geoserver</a></li>
         </ul>
-        <p>Wenn der Geoserver nicht verfügbar ist, wird momentan ein HTTP 404 an die Client-App geschickt.<br>
-          Wenn der Response zu lange dauert (weil zu viele Daten übertragen werden), wird ein Timeout HTTP 408 retourniert.  
-        </p>
-        <h4>Beispiel XML ServiceException Antwort</h4>
-        <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;ows:ExceptionReport version=&quot;1.0.0&quot;
-xsi:schemaLocation=&quot;http://www.opengis.net/ows http://data.wien.gv.at/daten/geoserver/schemas/ows/1.0.0/owsExceptionReport.xsd&quot;
-xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:ows=&quot;http://www.opengis.net/ows&quot;&gt;&lt;ows:Exception exceptionCode=&quot;NoApplicableCode&quot;&gt;&lt;ows:ExceptionText&gt;java.lang.NullPointerException
-null&lt;/ows:ExceptionText&gt;&lt;/ows:Exception&gt;&lt;/ows:ExceptionReport&gt;
-        </code></pre>
-
       </section>
       <footer>
-        <p>Ein Projekt von <a href="https://twitter.com/sindrewimberger">@sindrewimberger</a></p>
-        <p>Nützliche Tipps oder Infos? - Ergänzen und Pull Request machen!</p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
