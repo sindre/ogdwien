@@ -46,9 +46,9 @@
         <strong>Achtung es wird <a href="#Koordinatensysteme">Koordinatensystem</a> (EPSG:31256) verwendet.</strong>
         </p>
         <h3 id="Koordinatensysteme">Koordinatensysteme</h3>
-        <p>Die Stadt Wien verwendet intern das Koordinatensystem (EPSG:31256). Dies ist nicht mit dem GPS/ Google Maps Koordinatensystem kompatibel! Details dazu unter <a href="http://data.wien.gv.at/formate/koordinaten.html">http://data.wien.gv.at/formate/koordinaten.html</a></p>
-        <p>Zum Konvertieren kann z.B. <a href="http://trac.osgeo.org/proj/">Proj.4</a> verwendet werden. Bietet Implementierungen für verschiedene Programmiersprachen (JS, PHP,...)</p>
-        <p>In den PHP Version von Proj.4 gibt es laut Vincenz Leichtfried (<a href="http://allisearch.com/">http://allisearch.com/</a>) einen Bug.</p>
+        <p>Die Stadt Wien verwendet intern das Koordinatensystem (EPSG:31256). Dies ist nicht mit dem GPS/ Google Maps Koordinatensystem (EPSG:4326) kompatibel! Details dazu unter <a href="http://data.wien.gv.at/formate/koordinaten.html">http://data.wien.gv.at/formate/koordinaten.html</a></p>
+        <p>Daten über den OGD Wien Geoserver werden standardmäßig im GPS Format (EPSG:4326) ausgegeben und müssen nicht extra konvertiert werden. Die Geodaten der Veranstaltungsdatenbank enthalten aber das Wien interne Koordinatensystem (EPSG:31256). </p>
+        <p>Zum Konvertieren kann z.B. <a href="http://trac.osgeo.org/proj/">Proj.4</a> verwendet werden. Bietet Implementierungen für verschiedene Programmiersprachen (JS, PHP,...) <br>In den PHP Version von Proj.4 gibt es laut Vincenz Leichtfried (<a href="http://allisearch.com/">http://allisearch.com/</a>) einen Bug.</p>
         <h3>Technische Links</h3>
         <h4>Open Layer (JS Karten-Framework)- <a href="http://openlayers.org/">http://openlayers.org</a></h4>
         <p>Beispiel für <a href="http://dev.openlayers.org/releases/OpenLayers-2.12/examples/mobile-wmts-vienna.html#x=1823849.418472&y=6143760.7879735&z=12">OGD Wien Grundkarten Konfiguration</a>
